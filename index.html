@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="wrapper">
+    <h1 class="snake-title">SNAKE</h1>
+    <p class="snake-p">
+      Use keyboard arrows or WASD.<br><br>
+      1. Don't hit walls.<br>
+      2. Don't eat yourself.<br>
+      3. The snake speeds up after each apple.<br>
+      4. Eat the red apple that appears to grow.<br>
+      5. The game ends when you hit a wall or yourself.<br>
+
+
+    </p>
+    <p class="snake-high-score-p">High-score</p>
+    <p class="snake-high-score">0</p>
+
+    <!-- Menu -->
+    <div id="menu-container">
+      <button class="menu-play-button">Play</button>
+    </div>
+
+    <!-- Game -->
+    <div id="game-container" style="display: none;">
+      <p class="snake-score-p">Score</p>
+      <p class="snake-score">0</p>
+      <canvas id="snakeGame" width="400" height="400"></canvas>
+      <div class="controls">
+        <div class="control-button" id="left">&#9664;</div>
+        <div class="control-button" id="up">&#9650;</div>
+        <div class="control-button" id="down">&#9660;</div>
+        <div class="control-button" id="right">&#9654;</div>
+      </div>
+    </div>
+
+    <!-- Game Over -->
+    <div id="game-over-container" style="display: none;">
+      <h1 class="game-over-title">GAME OVER</h1>
+      <button class="game-over-play-button">Play Again</button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

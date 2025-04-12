@@ -1,0 +1,56 @@
+# Snake Game
+
+This project is a modern implementation of the classic Snake game using HTML, CSS, and JavaScript to provide an interactive and fun browser-based experience.
+
+![Snake Game Screenshot](thumbnail.png)
+
+## Features
+
+- Classic Snake gameplay with modern visuals
+- Increasing speed as the snake eats apples
+- Score and high score tracking with local storage
+- Smooth animations and responsive controls
+- Deadly walls - don't hit the edges!
+- Mobile-friendly touch controls
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Canvas API for rendering
+
+## How to Play
+
+1. Open `index.html` in any modern web browser
+2. Click "Play" to start the game
+3. Use arrow keys or WASD to control the snake's direction
+4. On mobile, use the on-screen arrow buttons
+5. Eat the red apples to grow the snake and increase your score
+6. Avoid hitting walls or colliding with your own tail
+
+## Game Rules
+
+1. Don't hit the walls - they are deadly!
+2. Don't eat yourself (collide with your own tail)
+3. You can't reverse direction directly
+4. The snake speeds up after each apple, increasing the challenge
+
+## High Scores
+
+The game keeps track of your highest score using browser local storage, so your achievements will be saved between sessions.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the game.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+- Inspired by the classic Snake game
+- Thanks to the open-source community for providing resources and inspiration
+
+Enjoy the game!

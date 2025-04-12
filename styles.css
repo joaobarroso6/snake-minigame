@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', sans-serif;
+  background: #000022;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  box-shadow: inset 0px 0px 0px 10px #00ff66;
+  background-color: #000022;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.snake-title {
+  color: #00ff66;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 10px 0;
+  text-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66;
+}
+
+.snake-p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.7em;
+  max-width: 550px;
+  margin: 0 auto 15px auto;
+  line-height: 1.5;
+}
+
+.snake-high-score-p, .snake-score-p {
+  color: #00ff66;
+  margin: 5px 0 2px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.snake-high-score, .snake-score {
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #ffffff;
+}
+
+#menu-container, #game-over-container, #game-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.menu-play-button, .game-over-play-button {
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', sans-serif;
+  background-color: #00ff66;
+  border: none;
+  color: #000022;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.menu-play-button:hover, .game-over-play-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ff66, 0 0 20px #00ff66;
+}
+
+#snakeGame {
+  background-color: #001122;
+  border: 5px solid #00ff66;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 20px #00ff66;
+}
+
+.controls {
+  margin-top: 20px;
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left . right"
+    ". down .";
+  grid-gap: 10px;
+  justify-content: center;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.control-button {
+  width: 55px;
+  height: 55px;
+  background-color: #00ff66;
+  color: #000022;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px #007f3f;
+  transition: all 0.2s ease;
+  font-size: 1.8rem;
+  user-select: none;
+  border-radius: 10px;
+}
+
+#up { 
+  grid-area: up; 
+}
+#down { 
+  grid-area: down; 
+}
+#left { 
+  grid-area: left; 
+}
+#right { 
+  grid-area: right; 
+}
+
+.control-button:hover {
+  background-color: #00cc55;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #007f3f;
+}
+
+.control-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.game-over-title {
+  color: #ff0066;
+  font-size: 2em;
+  margin-bottom: 20px;
+  animation: pulsate 1.5s infinite alternate;
+}
+
+@keyframes pulsate {
+  0% { text-shadow: 0 0 5px #ff0066, 0 0 10px #ff0066; }
+  100% { text-shadow: 0 0 15px #ff0066, 0 0 20px #ff0066, 0 0 25px #ff0066; }
+}
+
+@media screen and (max-width: 768px) {
+  .snake-p {
+    display: none; /* Esconde as instruções em dispositivos móveis */
+  }
+  
+  .snake-title {
+    margin-bottom: 10px;
+  }
+  
+  #snakeGame {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .controls {
+    display: none; /* Esconde os controles em modo landscape */
+  }
+  
+  .snake-title {
+    font-size: 1.8em;
+    margin: 5px 0;
+  }
+  
+  .snake-high-score-p, .snake-score-p {
+    margin: 2px 0;
+  }
+  
+  .snake-high-score, .snake-score {
+    margin-bottom: 5px;
+  }
+  
+  #snakeGame {
+    max-height: 70vh;
+    width: auto;
+  }
+}
